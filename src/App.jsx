@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Send, CheckCircle } from 'lucide-react';
 import felixaImg from './assets/felixaa.png';
+import './ContactForm.css';
 
 // 🔹 Your local FastAPI backend URL
 const API_BASE = 'http://127.0.0.1:8000';
@@ -79,183 +80,10 @@ export default function ContactForm() {
   };
 
 
-  const customStyles = `
-    .custom-form-container {
-      min-height: 100vh;
-      background-color: #f8f9fa;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0;
-    }
-    .custom-form-wrapper {
-      background: white;
-      border-radius: 0;
-      box-shadow: none;
-      width: 100%;
-      height: 100vh;
-      display: flex;
-      overflow: hidden;
-    }
-    .image-section {
-      flex: 1;
-      width: 50%;
-      
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 3rem;
-      min-height: 100vh;
-    }
-    .image-section img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 12px;
-      object-fit: cover;
-    }
-    .placeholder-image {
-      width: 100%;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: rgba(255,255,255,0.1);
-      border-radius: 12px;
-      color: white;
-      font-size: 1.5rem;
-      font-weight: 600;
-      text-align: center;
-      padding: 2rem;
-    }
-    .form-section {
-      flex: 1;
-      width: 50%;
-      padding: 3rem;
-      overflow-y: auto;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-    .company-name {
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: #2563eb;
-      margin-bottom: 1.5rem;
-    }
-    .form-title {
-      font-size: 2.25rem;
-      font-weight: 700;
-      color: #111827;
-      margin-bottom: 0.5rem;
-    }
-    .form-subtitle {
-      color: #6b7280;
-      margin-bottom: 2rem;
-      font-size: 1rem;
-    }
-    .custom-label {
-      display: block;
-      font-size: 0.875rem;
-      font-weight: 500;
-      color: #111827;
-      margin-bottom: 0.5rem;
-    }
-    .custom-input {
-      width: 100%;
-      padding: 0.75rem 1rem;
-      border: 1px solid #d1d5db;
-      border-radius: 8px;
-      font-size: 1rem;
-      transition: all 0.2s;
-      box-sizing: border-box;
-    }
-    .custom-input:focus {
-      outline: none;
-      border-color: #3b82f6;
-      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
-    }
-    .custom-textarea {
-      width: 100%;
-      padding: 0.75rem 1rem;
-      border: 1px solid #d1d5db;
-      border-radius: 8px;
-      font-size: 1rem;
-      transition: all 0.2s;
-      resize: none;
-      min-height: 120px;
-      box-sizing: border-box;
-    }
-    .custom-textarea:focus {
-      outline: none;
-      border-color: #3b82f6;
-      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
-    }
-    .textarea-wrapper {
-      position: relative;
-    }
-    
-    .custom-success-alert {
-      background-color: #f0fdf4;
-      border: 1px solid #bbf7d0;
-      border-radius: 8px;
-      padding: 1rem;
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      margin-bottom: 1.5rem;
-    }
-    .success-text {
-      color: #166534;
-      font-size: 0.875rem;
-      margin: 0;
-    }
-    .custom-submit-btn {
-      width: 100%;
-      background-color: #54188cff;
-      color: white;
-      font-weight: 500;
-      padding: 0.75rem 1.5rem;
-      border-radius: 8px;
-      border: none;
-      font-size: 1rem;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
-      transition: background-color 0.2s;
-    }
-    .custom-submit-btn:hover {
-      background-color: #a254c4ff;
-    }
-    .form-group {
-      margin-bottom: 1.5rem;
-    }
-    .text-danger {
-      color: #ef4444;
-    }
 
-    @media (max-width: 768px) {
-      .custom-form-wrapper {
-        flex-direction: column;
-      }
-      .image-section {
-        min-height: 300px;
-        padding: 2rem;
-      }
-      .form-section {
-        padding: 2rem;
-      }
-      .form-title {
-        font-size: 1.75rem;
-      }
-    }
-  `;
 
 return (
-    <>
-      <style>{customStyles}</style>
-      <div className="custom-form-container">
+    <div className="custom-form-container">
         <div className="custom-form-wrapper">
           {/* Left Side - Image */}
           <div className="image-section">
@@ -367,6 +195,5 @@ return (
           </div>
         </div>
       </div>
-    </>
-  );
+    );
 }
