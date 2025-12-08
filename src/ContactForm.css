@@ -74,6 +74,7 @@
   transition: all 0.2s;
   box-sizing: border-box;
   background: transparent;
+  color: #111827;
 }
 
 .custom-input:focus {
@@ -93,6 +94,7 @@
   min-height: 120px;
   box-sizing: border-box;
   background: transparent;
+  color: #111827;
 }
 
 .custom-textarea:focus {
